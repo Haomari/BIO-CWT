@@ -2,11 +2,12 @@
 // Снипет (HTML): btn
 
 .button {
+	font-size: rem(30);
 	color: #F5F5F5;
 	font-weight: 700;
 	background: #728BAD;
 	border-radius: rem(42);
-	display: inline-flex;
+	display: inline-block;
 	transition: all 0.3s ease 0s;
 	padding: rem(11) rem(70);
 	@media (any-hover: hover) {
