@@ -1,7 +1,6 @@
 //====================================================================================================
 .header {
-	background: #1E0C06;
-  box-shadow: 0px -8px 52px rgba(238, 238, 238, 0.17);
+	background-color: transparent;
   border-radius: 0px 0px 79px 79px;
   position: fixed;
 	transition: border-radius 0.3s ease 0s;
@@ -30,6 +29,8 @@
 		}
 		border-radius: 0px 0px 30px 30px;
 		box-shadow: none;
+		background: #1E0C06;
+		box-shadow: 0px -8px 52px rgba(238, 238, 238, 0.17);
 	}
 
 

@@ -96,6 +96,12 @@ body {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
+[class*="_container"] {
+	max-width: rem(1440);
+	box-sizing: content-box;
+	margin: 0 auto;
+}
+
 @if ($responsiveType==1) {
 	// Отзывчивая
 	[class*="__container"] {
