@@ -82,7 +82,7 @@
       top: 0;
       left: -100%;
       overflow: auto;
-      background-color: rgba(0, 0, 0, 0.3);
+			background: #461100;
       gap: rem(30);
       padding: rem(90) rem(15) rem(30) rem(15);
       @include adaptiveValue("padding-top", 140, 95, 0, 768, 320);
