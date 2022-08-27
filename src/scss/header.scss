@@ -1,54 +1,59 @@
 //====================================================================================================
 .header {
-	background-color: transparent;
+  background-color: transparent;
   border-radius: 0px 0px 79px 79px;
   position: fixed;
-	transition: border-radius 0.3s ease 0s;
-	transition: all 0.2s ease 0s;
+  transition: border-radius 0.3s ease 0s;
+  transition: all 0.2s ease 0s;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99;
   @include adaptiveValue("padding-top", 50, 20);
   @include adaptiveValue("padding-bottom", 50, 20);
-	@media (max-width:$mobile){
-		border-radius: 0px 0px 30px 30px;
-	}
 
-	&._header-scroll{
+  @media (max-width:$mobile) {
+    border-radius: 0px 0px 30px 30px;
+  }
 
-		padding-top: rem(25);
-		padding-bottom: rem(25);
-		@media (max-width:$mobile){
-			padding-top: rem(15);
-			padding-bottom: rem(15);
-		}
-		@media (max-width:$mobileSmall){
-			padding-top: rem(12);
-			padding-bottom: rem(12);
-		}
-		border-radius: 0px 0px 30px 30px;
-		box-shadow: none;
-		background: #1E0C06;
-		box-shadow: 0px -8px 52px rgba(238, 238, 238, 0.17);
-	}
+  &._header-scroll {
+
+    padding-top: rem(25);
+    padding-bottom: rem(25);
+
+    @media (max-width:$mobile) {
+      padding-top: rem(15);
+      padding-bottom: rem(15);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-top: rem(12);
+      padding-bottom: rem(12);
+    }
+
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: none;
+    background: #1E0C06;
+    box-shadow: 0px -8px 52px rgba(238, 238, 238, 0.17);
+  }
 
 
   &__container {
     display: flex;
     justify-content: space-between;
-		align-items: center;
-		padding: rem(0) rem(40);
-		@include adaptiveValue("padding-left", 40, 15);
-		@include adaptiveValue("padding-right", 40, 15);
+    align-items: center;
+    padding: rem(0) rem(40);
+    @include adaptiveValue("padding-left", 40, 15);
+    @include adaptiveValue("padding-right", 40, 15);
 
   }
 
   &__logo {
     position: relative;
-		z-index: 5;
-		width: rem(100);
+    z-index: 5;
+    width: rem(100);
     @include adaptiveValue("width", 197, 100, 2, 1440, 767.98);
+
     img {
       max-width: 100%;
     }
@@ -65,13 +70,13 @@
 
 .menu {
 
-	&__body {
-		@media (max-width:$mobile) {
+  &__body {
+    @media (max-width:$mobile) {
       position: fixed;
       display: flex;
       flex-direction: column;
       align-items: center;
-			transition: left 0.3s ease 0s;
+      transition: left 0.3s ease 0s;
       width: 100%;
       height: 100%;
       top: 0;
@@ -79,61 +84,69 @@
       overflow: auto;
       background-color: rgba(0, 0, 0, 0.3);
       gap: rem(30);
-			padding: rem(90) rem(15) rem(30) rem(15);
-			@include adaptiveValue("padding-top", 140, 95 ,0, 768, 320);
+      padding: rem(90) rem(15) rem(30) rem(15);
+      @include adaptiveValue("padding-top", 140, 95, 0, 768, 320);
+
       &::before {
         content: '';
         position: fixed;
         top: 0;
         left: -100%;
-				transition: left 0.3s ease 0s;
+        transition: left 0.3s ease 0s;
         width: 100%;
-				height: rem(82.63);
+        height: rem(82.63);
         @include adaptiveValue("height", 110.63, 82.63, 2, 768, 320);
-				background: #1E0C06;
+        background: #1E0C06;
       }
-			.menu-open &{
-				left: 0;
-				&::before{
-					left: 0;
-				}
-			}
-    }
-	}
 
-	&__list {
-		z-index: 1;
-		display: flex;
+      .menu-open & {
+        left: 0;
+
+        &::before {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__list {
+    z-index: 1;
+    display: flex;
     align-content: center;
-		gap: rem(20);
+    gap: rem(20);
     @include adaptiveValue("gap", 60, 20, 2, 1440, 767.98);
     color: #F5F5F5;
-    font-size: rem(30);
-		@media (max-width:$mobile) {
+		font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: math.div(24, 20);
+
+
+    @media (max-width:$mobile) {
       flex-direction: column;
       text-align: center;
       row-gap: rem(30);
     }
   }
 
-	&__item {
-	}
+  &__item {}
 
-	&__link {
-		@include adaptiveValue("font-size", 30, 22, 2, 1440, 767.98);
-	}
+  &__link {
+    @include adaptiveValue("font-size", 20, 15, 2, 1440, 767.98);
+  }
 }
 
-._header-scroll{
-	& .menu__body::before{
-		height: rem(125.67);
-		@media (max-width:$mobile){
-			height: rem(72.63);
-		}
-		@media (max-width:$mobileSmall){
-			height: rem(66.63);
-		}
-	}
+._header-scroll {
+  & .menu__body::before {
+    height: rem(125.67);
+
+    @media (max-width:$mobile) {
+      height: rem(72.63);
+    }
+
+    @media (max-width:$mobileSmall) {
+      height: rem(66.63);
+    }
+  }
 }
 
 //====================================================================================================
@@ -160,7 +173,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-			background: #F5F5F5;
+      background: #F5F5F5;
     }
 
     &::before {

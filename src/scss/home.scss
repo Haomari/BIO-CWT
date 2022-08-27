@@ -14,24 +14,41 @@
   }
 
   &__body {
-		max-width: 100%;
-    height: rem(714);
+    min-height: rem(714);
     background: #1E0C06;
     border-radius: 43px 0px 0px 43px;
     filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
-    margin: rem(0) rem(0) rem(0) rem(0);
-		@include adaptiveValue("margin-left", 93, 0, 2, 1440, 11180);
-		@include adaptiveValue("margin-bottom", -105, 0, 2, 1440, 1180);
+		@include adaptiveValue("margin-left", 93, 0, 2, 1440, 1320);
+		@include adaptiveValue("margin-right", -105, 0, 2, 1440, 1320);
     display: flex;
+		@media (max-width:$mobile){
+			flex-direction: column;
+		}
   }
 
   &__content {
-    flex: 0 0 percent(575, 1250);
+		position: relative;
+    flex: 0 1 50%;
+		padding: rem(20) rem(40) rem(0) rem(20);
+		@include adaptiveValue("padding-top", 62, 20, 2, 767.9);
+		@include adaptiveValue("padding-left", 75, 20, 2, 767.9);
 
-		margin: rem(62) rem(0) rem(0) rem(75);
+		&::after{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 71%;
+			left: 0;
+			bottom: 22%;
+			border-right: 1px solid #F5F5F5;
+			@media (max-width:$mobile){
+				display: none;
+			}
+		}
   }
 
   &__title {
+
 		max-width: rem(545);
     &:not(:last-child) {
       margin-bottom: rem(22);
@@ -39,41 +56,86 @@
   }
 
   &__text {
+		@include adaptiveValue("font-size", 30, 20);
     line-height: math.div(39, 30);
     color: #FFDBBB;
 		max-width: rem(333);
 
     &:not(:last-child) {
-      margin-bottom: rem(58);
+      margin-bottom: rem(20);
+			@include adaptiveValue("margin-bottom", 58, 20, 2, 767.9);
     }
+
+		& span{
+			font-weight: 700;
+		}
   }
 
   &__button {}
 
   &__images {
+		margin: rem(43) rem(30) rem(57) rem(45);
+		@include adaptiveValue("margin-right", 115, 30, 2, 1280, 991);
 		position: relative;
-		width: 100%;
+		flex: 1 1 41%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1.2fr;
+		align-items: center;
+		justify-content: center;
+		@media (max-width:$pc){
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			row-gap: rem(20);
+			@include adaptiveValue("margin-right", 30, 10, 2, 850, 767.9);
+			@include adaptiveValue("margin-left", 45, 20, 2, 850, 767.9);
+		}
 	}
 
+@mixin cgb {
+	@media (max-width:$mobile){
+		justify-self: center ;
+		align-self: center;
+	}
+}
   &__image {
-		border-radius: 42px;
-		overflow: hidden;
-		position: absolute;
+		@media (max-width:$mobile){
+			justify-self: center ;
+			align-self: center;
+		}
+
+
+		& img{
+			max-width: 100%;
+			border-radius: rem(42);
+		}
 
     &_1 {
-			top: percent(43, 714);
-			right: percent(115, 612);
+			grid-column: span 2;
+			justify-self: right;
+			align-self: start;
 		}
 
     &_2 {
-			top: percent(246, 714);
-			right: percent(360, 612);
+			justify-self: left;
+			align-self: start;
 			z-index: 5;
+			@include cgb;
 		}
 
     &_3 {
-			top: percent(452, 714);
-			right: percent(116, 612);
+			justify-self: right;
+			align-self: end;
+			@include cgb;
+		}
+
+		@media (max-width:$pc){
+			&_1 {
+				grid-column: span 1;
+				justify-self: right;
+				align-self: start;
+				@include cgb;
+			}
 		}
   }
 
