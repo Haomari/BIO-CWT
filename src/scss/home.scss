@@ -18,125 +18,130 @@
     background: #1E0C06;
     border-radius: 43px 0px 0px 43px;
     filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
-		@include adaptiveValue("margin-left", 93, 0, 2, 1440, 1320);
-		@include adaptiveValue("margin-right", -105, 0, 2, 1440, 1320);
+    @include adaptiveValue("margin-left", 93, 0, 2, 1440, 1320);
+    @include adaptiveValue("margin-right", -105, 0, 2, 1440, 1320);
     display: flex;
-		@media (max-width:$mobile){
-			flex-direction: column;
-		}
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
   }
 
   &__content {
-		position: relative;
+    position: relative;
     flex: 0 1 50%;
-		padding: rem(20) rem(40) rem(0) rem(20);
-		@include adaptiveValue("padding-top", 62, 20, 2, 767.9);
-		@include adaptiveValue("padding-left", 75, 20, 2, 767.9);
+    padding: rem(20) rem(40) rem(0) rem(20);
+    @include adaptiveValue("padding-top", 62, 20, 2, 767.9);
+    @include adaptiveValue("padding-left", 75, 20, 2, 767.9);
 
-		&::after{
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 71%;
-			left: 0;
-			bottom: 22%;
-			border-right: 1px solid #F5F5F5;
-			@media (max-width:$mobile){
-				display: none;
-			}
-		}
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 71%;
+      left: 0;
+      bottom: 22%;
+      border-right: 1px solid #F5F5F5;
+
+      @media (max-width:$mobile) {
+        display: none;
+      }
+    }
   }
 
   &__title {
 
-		max-width: rem(545);
+    max-width: rem(545);
+
     &:not(:last-child) {
       margin-bottom: rem(22);
     }
   }
 
   &__text {
-		@include adaptiveValue("font-size", 30, 20);
+    @include adaptiveValue("font-size", 30, 20);
     line-height: math.div(39, 30);
     color: #FFDBBB;
-		max-width: rem(333);
+    max-width: rem(333);
 
     &:not(:last-child) {
       margin-bottom: rem(20);
-			@include adaptiveValue("margin-bottom", 58, 20, 2, 767.9);
+      @include adaptiveValue("margin-bottom", 58, 20, 2, 767.9);
     }
 
-		& span{
-			font-weight: 700;
-		}
+    & span {
+      font-weight: 700;
+    }
   }
 
   &__button {}
 
   &__images {
-		margin: rem(43) rem(30) rem(57) rem(45);
-		@include adaptiveValue("margin-right", 115, 30, 2, 1280, 991);
-		position: relative;
-		flex: 1 1 41%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1.2fr;
-		align-items: center;
-		justify-content: center;
-		@media (max-width:$pc){
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr 1fr;
-			row-gap: rem(20);
-			@include adaptiveValue("margin-right", 30, 10, 2, 850, 767.9);
-			@include adaptiveValue("margin-left", 45, 20, 2, 850, 767.9);
-		}
-	}
+    margin: rem(43) rem(30) rem(57) rem(45);
+    @include adaptiveValue("margin-right", 115, 30, 2, 1280, 991);
+    position: relative;
+    flex: 1 1 41%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.2fr;
+    align-items: center;
+    justify-content: center;
 
-@mixin cgb {
-	@media (max-width:$mobile){
-		justify-self: center ;
-		align-self: center;
-	}
-}
+    @media (max-width:$pc) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      row-gap: rem(20);
+      @include adaptiveValue("margin-right", 30, 10, 2, 850, 767.9);
+      @include adaptiveValue("margin-left", 45, 20, 2, 850, 767.9);
+    }
+  }
+
+  @mixin cgb {
+    @media (max-width:$mobile) {
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
   &__image {
-		@media (max-width:$mobile){
-			justify-self: center ;
-			align-self: center;
-		}
+    @media (max-width:$mobile) {
+      justify-self: center;
+      align-self: center;
+    }
 
 
-		& img{
-			max-width: 100%;
-			border-radius: rem(42);
-		}
+    & img {
+      max-width: 100%;
+      border-radius: rem(42);
+    }
 
     &_1 {
-			grid-column: span 2;
-			justify-self: right;
-			align-self: start;
-		}
+      grid-column: span 2;
+      justify-self: right;
+      align-self: start;
+    }
 
     &_2 {
-			justify-self: left;
-			align-self: start;
-			z-index: 5;
-			@include cgb;
-		}
+      justify-self: left;
+      align-self: start;
+      z-index: 5;
+      @include cgb;
+    }
 
     &_3 {
-			justify-self: right;
-			align-self: end;
-			@include cgb;
-		}
+      justify-self: right;
+      align-self: end;
+      @include cgb;
+    }
 
-		@media (max-width:$pc){
-			&_1 {
-				grid-column: span 1;
-				justify-self: right;
-				align-self: start;
-				@include cgb;
-			}
-		}
+    @media (max-width:$pc) {
+      &_1 {
+        grid-column: span 1;
+        justify-self: right;
+        align-self: start;
+        @include cgb;
+      }
+    }
   }
 
   &__decor {
@@ -166,6 +171,82 @@
       max-width: 100%;
     }
   }
+}
+
+//========================================================================================================================================================
+
+
+.type {
+
+  &__container {}
+
+  &__title {
+    margin: 0 auto;
+    max-width: rem(950);
+		@include adaptiveValue("max-width", 950, 500);
+    @include adaptiveValue("margin-bottom", 125, 30);
+  }
+
+  &__items {
+		overflow: auto;
+    display: flex;
+		gap: rem(60);
+    justify-content: space-between;
+		padding-bottom: 3px;
+  }
+
+  &__item {
+		min-width: rem(272);
+	}
+}
+
+.item-type {
+
+  &__image {
+		display: flex;
+		position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: rem(39);
+    }
+
+    img {
+			margin: 0 auto;
+      max-width: 100%;
+      border-radius: rem(42);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+		text-align: center;
+		&:not(:last-child) {
+      margin-bottom: rem(44);
+    }
+  }
+
+  &__characteristics {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+		max-width: rem(280);
+	}
+
+  &__characteristic {
+		font-weight: 500;
+		position: relative;
+		margin-left: rem(30);
+
+		&::before{
+			content: '';
+			position: absolute;
+			width: rem(25);
+			height: rem(25);
+			top: rem(2);
+			left: rem(-35);
+			background: url('@img/type/check-mark.svg') 0 0 no-repeat;
+		}
+	}
 }
 
 

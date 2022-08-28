@@ -2,14 +2,24 @@
 .page {
 
 	&__main {
+		@include adaptiveValue("padding-bottom", 205, 25);
+	}
+
+	&__type {
+		@include adaptiveValue("padding-top", 205, 25);
+		@include adaptiveValue("padding-bottom", 105, 25);
 	}
 }
 
 .title {
 	font-family: Dmitry Rastvortsev ;
-	@include adaptiveValue("font-size", 90, 40);
+	@include adaptiveValue("font-size", 90, 50);
 	line-height: 115.4%;
 	text-transform: uppercase;
 	// font-weight: 500;
 	color: #F5F5F5;
+
+	&_40{
+		@include adaptiveValue("font-size", 90, 40);
+	}
 }
