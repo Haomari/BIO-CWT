@@ -235,16 +235,25 @@
   &__characteristic {
 		font-weight: 500;
 		position: relative;
-		margin-left: rem(30);
+		margin-left: rem(35);
 
 		&::before{
 			content: '';
 			position: absolute;
+			z-index: 5;
 			width: rem(25);
 			height: rem(25);
-			top: rem(2);
-			left: rem(-35);
-			background: url('@img/type/check-mark.svg') 0 0 no-repeat;
+			top: rem(5);
+			left: rem(-33);
+			background: url('@img/type/cross.svg') 0 0 no-repeat;
+		}
+
+		&_check{
+			&::before{
+				background: url('@img/type/check-mark.svg') 0 0 no-repeat;
+				top: rem(2);
+				left: rem(-35);
+			}
 		}
 	}
 }
