@@ -274,7 +274,9 @@
 
 .work {
 
-  &__container {}
+  &__container {
+		max-width: rem(1280);
+	}
 
   &__title {
     margin: 0 auto;
@@ -283,13 +285,17 @@
     @include adaptiveValue("margin-bottom", 125, 30);
   }
 
-  &__swiper {}
+  &__swiper {
+		@include adaptiveValue("margin-bottom", 26, 10);
+		margin-bottom: rem(26);
+	}
 }
 
 .swiper-work {
-  position: relative;
 
-  &__wrapper {}
+  &__wrapper {
+
+	}
 
   &__slide {
     display: flex;
@@ -297,13 +303,14 @@
     align-items: center;
 
     img {
+			border-radius: rem(42);
       max-width: 100%;
     }
 
 
   }
 
-  &__actions {
+  &__button {
     position: absolute;
     top: 50%;
     width: calc(var(--swiper-navigation-size) / 44 * 27);
@@ -317,7 +324,7 @@
     color: var(--swiper-navigation-color, var(--swiper-theme-color));
 
     &_1 {
-      left: 10px;
+      left: rem(0);
       right: auto;
     }
 
@@ -325,10 +332,41 @@
       right: 10px;
       left: auto;
     }
+
+		& img{
+			@media (max-width:$mobile){
+				width: rem(20);
+				height: rem(20);
+			}
+		}
   }
 
-  &__button {}
+  &__pagination {
+
+	}
 }
+
+.swiper-pagination-bullet {
+	@include adaptiveValue("width", 26, 17);
+	@include adaptiveValue("height", 26, 17);
+}
+
+.swiper-button-prev {
+}
+.swiper-work {
+
+		&__button {
+
+			&_1 {
+			}
+
+			&_2 {
+			}
+		}
+}
+.swiper-button-next {
+}
+
 
 .swiper {}
 
@@ -338,9 +376,20 @@
 
 .swiper-pagination {}
 
-.swiper-button-prev {}
+.swiper-button-prev {
+	left: rem(30);
+	right: auto;
 
-.swiper-button-next {}
+	&::after{
+		display: none;
+	}
+}
+
+.swiper-button-next {
+	&::after{
+		display: none;
+	}
+}
 
 .swiper-scrollbar {}
 
