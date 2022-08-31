@@ -11,6 +11,7 @@
 
   &__container {
     @include adaptiveValue("padding-top", 218, 130);
+		padding: rem(0) rem(0) rem(0) rem(15);
   }
 
   &__body {
