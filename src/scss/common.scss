@@ -12,8 +12,14 @@
 
 	&__work {
 		@include adaptiveValue("padding-top", 125, 25);
-		@include adaptiveValue("padding-bottom", 105, 25);
+		@include adaptiveValue("padding-bottom", 139, 25);
 	}
+
+	&__advantages {
+		@include adaptiveValue("padding-top", 139, 25);
+		@include adaptiveValue("padding-bottom", 146, 25);
+	}
+
 }
 
 .title {
