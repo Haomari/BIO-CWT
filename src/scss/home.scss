@@ -20,7 +20,7 @@
     border-radius: 43px 0px 0px 43px;
     filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
     @include adaptiveValue("margin-left", 93, 0, 2, 1440, 1320);
-    @include adaptiveValue("margin-right", -105, 0, 2, 1440, 1320);
+    @include adaptiveValue("margin-right", -105, 0, 2, 1440, 1280);
     display: flex;
 
     @media (max-width:$mobile) {
@@ -32,8 +32,8 @@
     position: relative;
     flex: 0 1 50%;
     padding: rem(20) rem(40) rem(0) rem(20);
-    @include adaptiveValue("padding-top", 62, 20, 2, 767.9);
-    @include adaptiveValue("padding-left", 75, 20, 2, 767.9);
+    @include adaptiveValue("padding-top", 62, 20, 2,1250 ,767.9);
+    @include adaptiveValue("padding-left", 75, 20, 2,1250 ,767.9);
 
     &::after {
       content: '';
@@ -60,7 +60,6 @@
   }
 
   &__text {
-    @include adaptiveValue("font-size", 30, 20);
     line-height: math.div(39, 30);
     color: #FFDBBB;
     max-width: rem(333);
@@ -68,10 +67,6 @@
     &:not(:last-child) {
       margin-bottom: rem(20);
       @include adaptiveValue("margin-bottom", 58, 20, 2, 767.9);
-    }
-
-    & span {
-      font-weight: 700;
     }
   }
 
@@ -447,7 +442,6 @@
 	}
 
 	&__text {
-		@include adaptiveValue("font-size", 30, 15);
 		line-height: 139.4%;
 		max-width: rem(387);
 		&:not(:last-child) {
@@ -467,6 +461,110 @@
 		@media (max-width:$mobileSmall){
 			width: 100%;
 			padding: rem(11) rem(0);
+		}
+	}
+}
+//========================================================================================================================================================
+
+.about {
+
+	&__container {
+		padding: rem(0) rem(10) rem(0) rem(0);
+	}
+
+	&__body {
+		height: rem(775);
+		// @include adaptiveValue("height", 775, 1500, 0, );
+		@media (max-width:$mobile){
+			height: rem(674);
+		}
+    background: #1E0C06;
+    border-radius: 0px rem(43) rem(43) 0px ;
+    filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
+    @include adaptiveValue("margin-left", -85, 0, 2, 1440, 1280);
+    display: flex;
+		// gap: rem(62);
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
+	}
+
+	&__content {
+		margin-top: rem(44);
+		padding-right: rem(62);
+
+    @include adaptiveValue("padding-left", 151, 20, 0, 1440 ,767.9);
+		// flex: 0 0 percent(831,1335);
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 67, 38);
+		}
+	}
+
+	&__text {
+	}
+
+	&__images {
+		position: relative;
+		flex: 0 0 percent(524,1335);
+		@media (max-width:$mobile){
+			// flex: 0 0 percent(775,982);
+			flex: 1 1 auto;
+		}
+
+}
+
+	&__image-ibg {
+		position: absolute;
+		max-width: 100%;
+		border-radius: rem(42);
+		overflow: hidden;
+
+
+		&_1 {
+			top: percent(167,775);
+			left: percent(0,524);
+			right: percent(144,524);
+			bottom: percent(261,775);
+			z-index: 5;
+			@media (max-width:$mobile){
+				
+			}
+		}
+
+		&_2 {
+			top: percent(61,775);
+			left: percent(219,524);
+			@include adaptiveValue("left",219, 90, 2 , 1350, 767);
+			right: percent(70,524);
+			bottom: percent(509,775);
+			@media (max-width:$mobile){
+				top: 2%;
+				left: percent(219,524);
+				@include adaptiveValue("left",219, 90, 0, 1350, 767);
+				right: percent(70,524);
+				@include adaptiveValue("bottom",450, 450, 0, 767, 320);
+				@include adaptiveValue("bottom",450, 450, 0, 767, 767);
+				bottom: 2%;
+			}
+		}
+
+		&_3 {
+			top: percent(539,775);
+			left: percent(219,524);
+			@include adaptiveValue("left",187, 70, 2 , 1350, 767);
+			right: percent(102,524);
+			bottom: percent(31,775);
+			@media (max-width:$mobile){
+				
+			}
+		}
+
+		& img {
+			object-fit: none;
 		}
 	}
 }
