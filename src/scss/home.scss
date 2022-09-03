@@ -74,7 +74,7 @@
   }
 
   &__button {
-
+		transition: all 0.3s ease 0s;
 		@media (max-width:$mobile){
 			margin: 0 auto;
 		}
@@ -101,6 +101,10 @@
       @include adaptiveValue("margin-right", 30, 10, 2, 850, 767.9);
       @include adaptiveValue("margin-left", 45, 20, 2, 850, 767.9);
     }
+
+		@media (max-width:$mobile){
+			margin: rem(30) 0;
+		}
   }
 
   @mixin cgb {
@@ -193,7 +197,7 @@
     margin: 0 auto;
     max-width: rem(950);
     @include adaptiveValue("max-width", 950, 500);
-    @include adaptiveValue("margin-bottom", 125, 30);
+    @include adaptiveValue("margin-bottom", 125, 10);
   }
 
   &__items {
@@ -216,7 +220,7 @@
     display: flex;
     position: relative;
 		z-index: 5;
-		margin-top: rem(10);
+		margin-top: rem(15);
 		margin-right: rem(15);
 		transition: all 0.3s ease 0s;
 		&:hover{
