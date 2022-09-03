@@ -29,11 +29,14 @@
   }
 
   &__content {
+		display: flex;
+		flex-direction: column;
     position: relative;
     flex: 0 1 50%;
-    padding: rem(20) rem(40) rem(0) rem(20);
-    @include adaptiveValue("padding-top", 62, 20, 2,1250 ,767.9);
-    @include adaptiveValue("padding-left", 75, 20, 2,1250 ,767.9);
+		padding-right: rem(15);
+    @include adaptiveValue("padding-top", 62, 20, 0,1250 ,767.9);
+    @include adaptiveValue("padding-left", 75, 15, 0,1250 ,767.9);
+		@include adaptiveValue("padding-right", 40, 40, 1,1250 ,767.9);
 
     &::after {
       content: '';
@@ -70,7 +73,15 @@
     }
   }
 
-  &__button {}
+  &__button {
+
+		@media (max-width:$mobile){
+			margin: 0 auto;
+		}
+		@media (max-width:$mobileSmall){
+			width: 100%;
+		}
+	}
 
   &__images {
     margin: rem(43) rem(30) rem(57) rem(45);
@@ -358,8 +369,6 @@
 	@include adaptiveValue("height", 26, 17);
 }
 
-.swiper-button-prev {
-}
 .swiper-work {
 
 		&__button {
@@ -371,17 +380,6 @@
 			}
 		}
 }
-.swiper-button-next {
-}
-
-
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.swiper-pagination {}
 
 .swiper-button-prev {
 	left: rem(30);
@@ -398,7 +396,7 @@
 	}
 }
 
-.swiper-scrollbar {}
+
 
 //========================================================================================================================================================
 
@@ -495,7 +493,11 @@
 		padding-right: rem(62);
 
     @include adaptiveValue("padding-left", 151, 20, 0, 1440 ,767.9);
-		// flex: 0 0 percent(831,1335);
+		flex: 0 0 percent(831,1335);
+		@media (max-width:$mobile){
+			flex: 0 0 percent(251,674);
+			padding-right: 0;
+		}
 	}
 
 	&__title {
@@ -505,6 +507,10 @@
 	}
 
 	&__text {
+		line-height: 139.4%;
+		@media (max-width:$mobile){
+			padding-right: rem(48);
+		}
 	}
 
 	&__images {
@@ -531,24 +537,24 @@
 			bottom: percent(261,775);
 			z-index: 5;
 			@media (max-width:$mobile){
-				
+				top: rem(65);
+				left: rem(32);
+				@include adaptiveValue("bottom",70, 120, 0, 767, 320);
+				@include adaptiveValue("right", 400, 100, 0, 767, 320);
 			}
 		}
 
 		&_2 {
 			top: percent(61,775);
-			left: percent(219,524);
+			left: percent(289,524);
 			@include adaptiveValue("left",219, 90, 2 , 1350, 767);
 			right: percent(70,524);
 			bottom: percent(509,775);
 			@media (max-width:$mobile){
-				top: 2%;
-				left: percent(219,524);
-				@include adaptiveValue("left",219, 90, 0, 1350, 767);
-				right: percent(70,524);
-				@include adaptiveValue("bottom",450, 450, 0, 767, 320);
-				@include adaptiveValue("bottom",450, 450, 0, 767, 767);
-				bottom: 2%;
+				top: rem(47);
+				left: rem(135);
+				right: rem(0);
+				@include adaptiveValue("bottom",180, 200, 0, 767, 320);
 			}
 		}
 
@@ -559,12 +565,19 @@
 			right: percent(102,524);
 			bottom: percent(31,775);
 			@media (max-width:$mobile){
-				
+				bottom: rem(29);
+				right: rem(0);
+				left: rem(57);
+				@include adaptiveValue("left",400, 57, 0, 767, 320);
+				@include adaptiveValue("top",200, 220, 0, 767, 320);
 			}
 		}
 
 		& img {
 			object-fit: none;
+			@media (max-width:$mobile){
+				object-fit:contain;
+			}
 		}
 	}
 }

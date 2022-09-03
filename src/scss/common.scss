@@ -28,15 +28,11 @@
 
 .title {
 	font-family: Dmitry Rastvortsev ;
-	@include adaptiveValue("font-size", 90, 50);
+	@include adaptiveValue("font-size", 90, 30);
 	line-height: 115.4%;
 	text-transform: uppercase;
 	// font-weight: 500;
 	color: #F5F5F5;
-
-	&_40{
-		@include adaptiveValue("font-size", 90, 40);
-	}
 }
 
 .text {
