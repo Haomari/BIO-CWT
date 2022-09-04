@@ -2,27 +2,32 @@
 .page {
 
 	&__main {
-		@include adaptiveValue("padding-bottom", 205, 25);
+		@include adaptiveValue("padding-bottom", 205, 40);
 	}
 
 	&__type {
-		@include adaptiveValue("padding-top", 205, 25);
-		@include adaptiveValue("padding-bottom", 125, 25);
+		@include adaptiveValue("padding-top", 205, 40);
+		@include adaptiveValue("padding-bottom", 125, 40);
 	}
 
 	&__work {
-		@include adaptiveValue("padding-top", 125, 25);
-		@include adaptiveValue("padding-bottom", 139, 25);
+		@include adaptiveValue("padding-top", 125, 40);
+		@include adaptiveValue("padding-bottom", 139, 40);
 	}
 
 	&__advantages {
-		@include adaptiveValue("padding-top", 139, 25);
-		@include adaptiveValue("padding-bottom", 146, 25);
+		@include adaptiveValue("padding-top", 139, 40);
+		@include adaptiveValue("padding-bottom", 146, 40);
 	}
 
 	&__about {
-		@include adaptiveValue("padding-top", 146, 25);
-		@include adaptiveValue("padding-bottom", 96, 25);
+		@include adaptiveValue("padding-top", 146, 40);
+		@include adaptiveValue("padding-bottom", 96, 30);
+	}
+
+	&__questions {
+		@include adaptiveValue("padding-top", 96, 30);
+		@include adaptiveValue("padding-bottom", 109, 93);
 	}
 }
 
@@ -37,7 +42,7 @@
 
 .text {
 	@include adaptiveValue("font-size", 30, 15);
-	
+	font-weight: 500;
 	& span {
 		font-weight: 700;
 	}
