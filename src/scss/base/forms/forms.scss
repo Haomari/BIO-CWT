@@ -16,7 +16,7 @@
 	&__line {
 	}
 	&__input {
-		@include adaptiveValue("max-width", 600, 350,1,1250,767);
+		@include adaptiveValue("max-width", 600, 350,2,1250,767);
 		flex: 1 1 auto;
 		color: rgba(217, 217, 217, 0.51);
 		font-size: rem(30);

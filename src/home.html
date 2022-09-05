@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	@@include('html/_head.htm',{
-	"title":"Главная"
+	"title":"Main"
 	})
 		<!-- @@include('html/_form.htm',{}) -->
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
-				<section class="page__main main">
+			<main class="home">
+				<section class="home__main main">
 				<div class="main_container">
 					<div class="main__container">
 						<div class="main__body">
@@ -35,85 +35,16 @@
 					</div>
 				</div>
 				</section>
-				<section class="page__type type">
-					<div class="type__container">
-						<h2 class="type__title title">
-							THE WOOD WE WORK WITH
-						</h2>
-						<div class="type__items">
-							<div class="type__item item-type">
-								<div class="item-type__image"><img src="@img/type/01.jpg" alt=""></div>
-								<div class="item-type__title">Oak</div>
-								<div class="item-type__characteristics text">
-									<div class="item-type__characteristic_check item-type__characteristic">Durability</div>
-									<div class="item-type__characteristic_check item-type__characteristic">Beautiful texture</div>
-									<div class="item-type__characteristic_check item-type__characteristic">Water resistance</div>
-									<div class="item-type__characteristic">Expensive</div>
-								</div>
-								<a class="item-type__arow" href="#" data-goto="#ps1" ></a>
-							</div>
-							<div class="type__item item-type">
-								<div class="item-type__image"><img src="@img/type/02.jpg" alt=""></div>
-								<div class="item-type__title">Buk</div>
-								<div class="item-type__characteristics text">
-									<div class="item-type__characteristic_check item-type__characteristic">Durability</div>
-									<div class="item-type__characteristic">Hard to handle</div>
-								</div>
-							</div>
-							<div id="#ps1" class="type__item item-type item-type_1">
-								<div class="item-type__image"><img src="@img/type/03.jpg" alt=""></div>
-								<div class="item-type__title">Ash</div>
-								<div class="item-type__characteristics text">
-									<div class="item-type__characteristic_check item-type__characteristic">Durability</div>
-									<div class="item-type__characteristic">Hard to handle</div>
-								</div>
-							</div>
-						</div>
-					</div>
+				<section class="home__type type">
+					@@include('html/_type.htm',{})
 				</section>
-				<section class="page__work work">
-					<div class="work__container">
-						<h2 class="work__title title">Our work</h2>
-						<div class="work__swiper swiper-work swiper">
-							<div class="swiper-work__wrapper swiper-wrapper">
-								<div class="swiper-work__slide swiper-slide">
-									<img src="@img/work/image.jpg" alt="">
-								</div>
-								<div class="swiper-work__slide swiper-slide">
-									<img src="@img/work/image.jpg" alt="">
-								</div>
-								<div class="swiper-work__slide swiper-slide">
-									<img src="@img/work/image.jpg" alt="">
-								</div>
-							</div>
-								<button type="button" class="swiper-button-prev swiper-work__button swiper-work__button_1">
-									<img src="@img/work/arrow-left.svg" alt="">
-								</button>
-								<button type="button" class="swiper-button-next swiper-work__button swiper-work__button_2 ">
-									<img src="@img/work/arrow-right.svg" alt="">
-								</button>
-						</div>
-						<div class="swiper-work__pagination swiper-pagination"></div>
-					</div>
+				<section class="home__work work">
+					@@include('html/_work.htm',{})
 				</section>
-				<section class="page__advantages advantages">
-					<div class="advantages__container">
-						<h2 class="advantages__title title">Advantages
-							working with us</h2>
-							<div class="advantages__content">
-								<div class="advantages__image">
-									<img src="@img/advantages/video.jpg" alt="">
-								</div>
-								<div class="advantages__item text">
-										<p class="advantages__text">In-house carpentry production</p>
-										<p class="advantages__text">We only treat wood with environmentally friendly and safe products</p>
-										<p class="advantages__text">Prices from the manufacturer, no extra charges</p>
-								</div>
-							</div>
-							<button class="advantages__button button">Receive a consultation</button>
-					</div>
+				<section class="home__advantages advantages">
+					@@include('html/_advantages.htm',{})
 				</section>
-				<section class="page__about about">
+				<section class="home__about about">
 					<div class="about_container">
 					<div class="about__container">
 						<div class="about__body">
@@ -130,7 +61,7 @@
 					</div>
 				</div>
 				</section>
-				<section class="page__questions questions">
+				<section class="home__questions questions">
 					<div class="questions__container">
 						<h2 class="questions__title title">Any questions?</h2>
 						<div class="questions__content">

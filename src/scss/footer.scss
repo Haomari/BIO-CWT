@@ -1,3 +1,66 @@
 //====================================================================================================
+.footer {
+  background: #222021;
+  box-shadow: 0px -6px 52px rgba(245, 245, 245, 0.17);
+  z-index: 30;
+  @include adaptiveValue("padding-top", 70, 50);
+  @include adaptiveValue("padding-bottom", 61, 38);
+
+  &__container {}
+
+  &__main {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("margin-bottom", 58, 30, 2, 1250, 767);
+    @include adaptiveValue("margin-bottom", 70, 35, 3, 767, 320);
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    @include adaptiveValue("margin-right", 70, 20, 2, 1250, 767);
+    @include adaptiveValue("margin-bottom", 60, 35, 3, 767, 320);
+    @include adaptiveValue("width", 190, 150, 3, 767, 320);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+  }
+
+  &__call-us {
+    @include adaptiveValue("margin-right", 107, 20, 2, 1250, 767);
+    @include adaptiveValue("margin-bottom", 15, 10, 3, 767, 320);
+  }
+
+  &__icon {
+		@include adaptiveValue("width", 35, 22, 3, 767, 320);
+
+		img {
+      max-width: 100%;
+    }
+	}
+
+  &__phone {}
+
+  &__find-us {
+    line-height: 139.4%;
+  }
+
+  &__place {}
+
+  &__bottom {
+    @media (max-width:$mobile) {
+      text-align: center;
+    }
+  }
+}
 
 //====================================================================================================

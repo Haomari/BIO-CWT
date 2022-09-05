@@ -633,7 +633,7 @@
 	&__decor {
 		position: absolute;
 		bottom: rem(-330);
-		right: rem(-100);
+		right: rem(-80);
 		@media (max-width:$mobile){
 			display: none;
 		}
