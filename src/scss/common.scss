@@ -31,6 +31,26 @@
 	}
 }
 
+.gallery {
+
+	&__work {
+		@include adaptiveValue("padding-top", 283, 105);
+		@include adaptiveValue("padding-bottom", 118, 20);
+	}
+
+	&__type {
+		@include adaptiveValue("padding-top", 118, 20);
+		@include adaptiveValue("padding-bottom", 78, 35);
+	}
+
+	&__questions {
+		@include adaptiveValue("padding-top", 78,35);
+		@include adaptiveValue("padding-bottom", 169, 95);
+	}
+}
+
+
+
 .title {
 	font-family: Dmitry Rastvortsev ;
 	@include adaptiveValue("font-size", 90, 30);

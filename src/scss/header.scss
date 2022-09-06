@@ -133,6 +133,15 @@
 
   &__link {
     @include adaptiveValue("font-size", 20, 15, 2, 1440, 767.98);
+		transition: all 0.2s ease 0s;
+
+		&.current-link {
+			color:#baada7;
+		}
+
+		&:hover{
+			color: rgb(206, 180, 180);
+		}
   }
 }
 

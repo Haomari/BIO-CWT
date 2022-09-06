@@ -48,13 +48,23 @@
     }
 	}
 
-  &__phone {}
+  &__phone {
+		transition: color 0.3s ease 0s;
+		&:hover{
+			color: rgb(206, 180, 180);
+		}
+	}
 
   &__find-us {
     line-height: 139.4%;
   }
 
-  &__place {}
+  &__place {
+		transition: color 0.3s ease 0s;
+		&:hover{
+			color: rgb(206, 180, 180);
+		}
+	}
 
   &__bottom {
     @media (max-width:$mobile) {
