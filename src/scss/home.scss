@@ -661,15 +661,10 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	color: #000000;
-	@include adaptiveValue("margin-left", 70, 20, 3, 1265, 320);
-	@include adaptiveValue("margin-right", 70, 20, 3, 1265, 320);
+	border-collapse: collapse;
+	// @include adaptiveValue("margin-left", 70, 20, 3, 1265, 320);
+	// @include adaptiveValue("margin-right", 70, 20, 3, 1265, 320);
 
-	@media (max-width:em(1265)){
-
-	}
-	@media (max-width:$mobile){
-
-	}
 
 
 	&__bolt {
@@ -682,27 +677,26 @@
 	}
 
 	&__right {
-		// border-right: rem(10) solid #222021;
 		border-style: solid;
-		border-color: #222021;
+		border-right-color: #222021;
 		@include adaptiveValue("border-right-width", 10, 3);
 	}
 
 	&__left {
 		border-style: solid;
-		border-color: #222021;
+		border-left-color: #222021;
 		@include adaptiveValue("border-left-width", 10, 3);
 	}
 
 	&__top {
 		border-style: solid;
-		border-color: #222021;
+		border-top-color: #222021;
 		@include adaptiveValue("border-top-width", 10, 3);
 	}
 
 	&__bottom {
 		border-style: solid;
-		border-color: #222021;
+		border-bottom-color: #222021;
 		@include adaptiveValue("border-bottom-width", 10, 3);
 	}
 
@@ -729,21 +723,45 @@
 }
 
 
+
+.tablepress:first-child,
+.tablepress tbody td:first-child,
+.tablepress tr:first-child,
+.tablepress tr:last-child,
+.tablepress thead th:first-child {
+border-left: 0 !important;
+}
+
+.tablepress:last-child,
+.tablepress tbody td:last-child,
+.tablepress tr:last-child,
+.tablepress tr:first-child,
+.tablepress thead th:last-child {
+border-right: 0 !important;
+}
+
+.tablepress-id-2 .row-4 td {
+	border-left: none !important;
+	}
+
 table {
 	background: #222021;
 	@include adaptiveValue("font-size", 30, 10);
 	@include adaptiveValue("border-radius", 42, 14);
 	overflow: hidden;
-	border-spacing: 0;
-	border: 0;
+	// border-spacing: 0.00001px;
+	// border-spacing: 0;
 }
 tr {
-
+	border-collapse: collapse;
 }
 
+
 th {
-	border-bottom: 1px solid rgba(142, 57, 33, 0.37);
+	border-collapse: collapse;
+	border-bottom: 3px solid rgba(142, 57, 33, 0.37);
 	vertical-align: bottom;
+	margin-bottom: rem(1);
 	background: #D9D9D9;
 	font-weight: 500;
 	@include adaptiveValue("height", 95, 40);
