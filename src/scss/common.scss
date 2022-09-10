@@ -52,12 +52,12 @@
 .prices {
 
 	&__price-list {
-		@include adaptiveValue("padding-top", 283, 105);
-		@include adaptiveValue("padding-bottom", 118, 20);
+		@include adaptiveValue("padding-top", 297, 111);
+		@include adaptiveValue("padding-bottom", 81, 28);
 	}
 
 	&__questions {
-		@include adaptiveValue("padding-top", 78,35);
+		@include adaptiveValue("padding-top", 81,28);
 		@include adaptiveValue("padding-bottom", 169, 95);
 	}
 }

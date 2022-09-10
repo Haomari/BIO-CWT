@@ -339,8 +339,8 @@
   &__button {
     position: absolute;
     top: 50%;
-    width: calc(var(--swiper-navigation-size) / 44 * 27);
-    height: var(--swiper-navigation-size);
+		@include adaptiveValue("width", 54, 12);
+		@include adaptiveValue("hight", 54, 12);
     margin-top: calc(0px - var(--swiper-navigation-size) / 2);
     z-index: 10;
     cursor: pointer;
@@ -360,7 +360,8 @@
     }
 
 		& img{
-			@include adaptiveValue("width", 54,20 );
+			@include adaptiveValue("width", 54, 12);
+			@include adaptiveValue("hight", 54, 12);
 		}
   }
 
@@ -639,6 +640,29 @@
 //========================================================================================================================================================
 .prices {
 
+	&__tables {
+		@include adaptiveValue("margin-left", 70, 15, 0, 1265, 320);
+		@include adaptiveValue("margin-right", 70, 15, 0, 1265, 320);
+		display: grid;
+		grid-template-columns: 1fr 0.8fr;
+		@include adaptiveValue("gap", 22, 8);
+	}
+
+	&__table {
+
+		&_1 {
+		}
+
+		&_2 {
+		}
+
+		&_3 {
+		}
+
+		&_4 {
+		}
+	}
+
 	&__price-list {
 	}
 
@@ -648,12 +672,16 @@
 .price-list {
 
 	&__container {
+		padding: rem(0) rem(10);
 	}
 
 	&__title {
+		@include adaptiveValue("margin-bottom", 116, 57);
+		@include adaptiveValue("margin-left", 160, 10);
 	}
 
 	&__swiper {
+		@include adaptiveValue("margin-bottom", 67, 15);
 	}
 }
 
@@ -661,23 +689,32 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	color: #000000;
-	position: relative;
-	z-index: -1;
-	// @include adaptiveValue("margin-left", 70, 20, 3, 1265, 320);
-	// @include adaptiveValue("margin-right", 70, 20, 3, 1265, 320);
 
-
+	&__first-column{
+		@include adaptiveValue("width", 27, 7);
+	}
 
 	&__bolt {
 		font-weight: 700;
 	}
 
-	&__last-line {
-		@include adaptiveValue("padding-bottom", 27, 12);
-		@include adaptiveValue("height", 122, 52);
+	
+	&__color-red {
+		background: #E69679;
 	}
 
-	&__right {
+	&__last-line {
+	}
+
+	&__last-tr {
+		@include adaptiveValue("height", 22, 5);
+	}
+
+	&__none-border{
+		border: none;
+	}
+
+/* 	&__right {
 		border-style: solid;
 		border-right-color: #222021;
 		@include adaptiveValue("border-right-width", 10, 3);
@@ -702,10 +739,6 @@
 		@include adaptiveValue("border-bottom-width", 10, 3);
 	}
 
-	&__color-red {
-		background: #E69679;
-	}
-
 	&__top-right {
 		@include adaptiveValue("border-top-right-radius", 42, 14);
 		overflow: hidden;
@@ -724,8 +757,8 @@
 	&__bottom-right {
 		@include adaptiveValue("border-bottom-right-radius", 42, 14);
 	}
+} */
 }
-
 
 
 .tablepress:first-child,
@@ -766,15 +799,23 @@ tr {
 
 th {
 	border-collapse: collapse;
-	border-bottom: 3px solid rgba(142, 57, 33, 0.37);
+	border-bottom: rem(3) solid rgba(142, 57, 33, 0.37);
+	@include adaptiveValue("border-width", 2, 0.5);
+	@include adaptiveValue("padding-left", 5, 7);
+	&:first-child{
+		@include adaptiveValue("padding-left", 14, 5);
+	}
+
 	vertical-align: bottom;
+	text-align: left;
 	margin-bottom: rem(1);
 	background: #D9D9D9;
 	font-weight: 500;
-	@include adaptiveValue("height", 95, 40);
+	@include adaptiveValue("height", 90, 25);
 	width: rem(160);
 	overflow: hidden;
 }
+
 
 
 //====================================================================================================
