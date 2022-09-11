@@ -62,6 +62,26 @@
 	}
 }
 
+.about-us {
+
+	&__about {
+		@include adaptiveValue("padding-top", 288, 111);
+		@include adaptiveValue("padding-bottom", 103, 31);
+	}
+
+	&__work {
+		@include adaptiveValue("padding-top", 103, 31);
+		@include adaptiveValue("padding-bottom", 141, 63);
+	}
+
+	&__questions {
+		@include adaptiveValue("padding-top", 141,63);
+		@include adaptiveValue("padding-bottom", 169, 95);
+	}
+}
+
+
+
 
 .title {
 	font-family: Dmitry Rastvortsev ;
