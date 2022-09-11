@@ -172,9 +172,8 @@
 .swiper-button-next,
 .swiper-button-prev {
 	position: absolute;
-	top: 46.875%;
 	top: 50%;
-	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+	margin-top: calc(2px - (var(--swiper-navigation-size) / 2));
 	z-index: 20;
 	cursor: pointer;
 	display: flex;
