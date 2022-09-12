@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Contact"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="contact-us">
+				<section class="contact-us__contact contact">
+					<div class="contact__container">
+						<div class="contact__body">
+							<h2 class="contact__title title">Contact</h2>
+							<div class="contact__link text">
+								<div class="contact__call-us contact__item">
+									<div class="contact__icon"><img src="@img/footer/call-us.svg" alt="Icon"></div>
+									<a href="tell:+2349123456789" class="contact__phone">+2349123456789</a>
+								</div>
+								<div class="contact__find-us contact__item">
+									<div class="contact__icon"><img src="@img/footer/find-us.svg" alt="Icon"></div>
+									<a href="https://g.page/allzora?share" class="contact__place">Na Plzeňce 1166/0
+										<p>150 00</p></a>
+								</div>
+							</div>
+						</div>
+						<div class="contact__map-body">
+							<iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.1460192978493!2d14.407686365939764!3d50.064826972956006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b945b95b40c65%3A0x425c89c3bcbc2d8b!2sPerson%C3%A1ln%C3%AD%20agentura%20GOODWORKER!5e0!3m2!1sen!2spl!4v1663000888874!5m2!1sen!2spl"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</section>
+				<section class="contact-us__questions questions">
+					@@include('html/_questions.htm',{})
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

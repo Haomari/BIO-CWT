@@ -830,6 +830,73 @@ th {
   overflow: hidden;
 }
 
+//====================================================================================================
+
+.contact {
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__body {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 118, 41);
+	}
+
+	&__link {
+	}
+
+	&__call-us {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 34, 30);
+		}
+	}
+
+	&__item {
+		display: flex;
+		gap: rem(14);
+	}
+
+	&__icon {
+	}
+
+	&__phone {
+	}
+
+	&__find-us {
+	}
+
+	&__place {
+	}
+
+	&__map-body {
+		@include adaptiveValue("width", 493, 400, 2, 1250, 767.8);
+
+		position: relative;
+
+
+	}
+
+	&__map {
+		z-index:0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;left: 0;
+		@include adaptiveValue("border-radius", 42, 14);
+		overflow: hidden;
+/* 		&::after{
+			content: '';
+			position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+			@include adaptiveValue("border-radius", 42, 14);
+			overflow: hidden;
+			pointer-events: none;
+		} */
+	}
+}
 
 
 //====================================================================================================

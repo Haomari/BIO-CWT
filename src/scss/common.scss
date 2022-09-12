@@ -80,6 +80,17 @@
 	}
 }
 
+.contact-us {
+	&__contact {
+		@include adaptiveValue("padding-top", 290, 102);
+		@include adaptiveValue("padding-bottom", 80, 21);
+	}
+
+	&__questions {
+		@include adaptiveValue("padding-top", 80, 21);
+		@include adaptiveValue("padding-bottom", 169, 95);
+	}
+}
 
 
 
