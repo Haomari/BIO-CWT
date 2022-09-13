@@ -1,5 +1,14 @@
+/* function initMap() {
+	const uluru = { lat: -25.344, lng: 131.031 };
+// The map, centered at Uluru
+const map = new google.maps.Map(document.getElementById("map"), {
+  zoom: 4,
+  center: uluru,
+});
+} */
 
-function mapAdd() {
+
+/* function mapAdd() {
 	let tag = document.createElement('script');
 	tag.src = "https://maps.google.com/maps/api/js?sensor=false&amp;key=&callback=mapInit";
 	let firstScriptTag = document.getElementsByTagName('script')[0];
@@ -77,7 +86,7 @@ function mapInit(n = 1) {
 }
 if (document.querySelector('#map')) {
 	mapAdd();
-}
+} */
 
 
 /* YA

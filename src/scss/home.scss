@@ -837,6 +837,9 @@ th {
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width:$mobile){
+			flex-direction: column;
+		}
 	}
 
 	&__body {
@@ -867,34 +870,45 @@ th {
 	}
 
 	&__find-us {
+		@include adaptiveValue("margin-bottom", 80, 40, 3, 767.8, 320);
 	}
 
 	&__place {
 	}
 
 	&__map-body {
-		@include adaptiveValue("width", 493, 400, 2, 1250, 767.8);
-
+		@include adaptiveValue("width", 493, 380, 2, 1250, 767.8);
+		mask-image: (#798589, #798589);
+		transform: (0px, 0px, 0px);
 		position: relative;
+		@media (max-width:$mobile){
+			height: rem(230);
+			@include adaptiveValue("height", 700, 210);
+			width: 100%;
+		}
 
-
+		& iframe{
+			z-index:0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;left: 0;
+			@include adaptiveValue("border-radius", 42, 14);
+			overflow: hidden;
+			mask-image: (#798589, #798589);
+			transform: (0px, 0px, 0px);
+	/* 		&::after{
+				content: '';
+				position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+				@include adaptiveValue("border-radius", 42, 14);
+				overflow: hidden;
+				pointer-events: none;
+			} */
+		}
 	}
 
 	&__map {
-		z-index:0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;left: 0;
-		@include adaptiveValue("border-radius", 42, 14);
-		overflow: hidden;
-/* 		&::after{
-			content: '';
-			position: absolute;width: 100%;height: 100%;top: 0;left: 0;
-			@include adaptiveValue("border-radius", 42, 14);
-			overflow: hidden;
-			pointer-events: none;
-		} */
+
 	}
 }
 
