@@ -334,6 +334,8 @@
     align-items: center;
 
     div {
+			position: relative;
+			z-index: 5;
       @include adaptiveValue("margin-left", 70, 15, 0, 1265, 320);
       @include adaptiveValue("margin-right", 70, 15, 0, 1265, 320);
     }

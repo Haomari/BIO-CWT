@@ -7,19 +7,18 @@ import 'simplebar/dist/simplebar.css';
 
 // Также можно инициализировать следующим кодом, применяя настройки
 
-/* if (document.getElementById('scroll').length) {
-	document.getElementById('scroll').forEach(scrollBlock => {
+if (document.querySelectorAll('[data-simplebar]').length) {
+	document.querySelectorAll('[data-simplebar]').forEach(scrollBlock => {
 		new SimpleBar(scrollBlock, {
 			autoHide: false,
-			forceVisible: true|'x'|'y' ,
-			timeout: 1000,
-			scrollbarMinSize: 1100,
+			scrollbarMinSize: 50,
+			scrollbarMaxSize: 300,
 		});
 	});
-} */
+}
 
-new SimpleBar(document.getElementById('scroll'), {
-	autoHide: false,
-	timeout: 1000,
-	scrollbarMinSize: 100,
-});
+
+// new SimpleBar(document.getElementById('scroll'), {
+// 	autoHide: false,
+// 	scrollbarMinSize: 100,
+// });
