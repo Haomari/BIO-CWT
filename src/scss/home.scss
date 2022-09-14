@@ -194,19 +194,27 @@
   &__container {}
 
   &__title {
-
     margin: 0 auto;
     max-width: rem(950);
     @include adaptiveValue("max-width", 950, 500);
     @include adaptiveValue("margin-bottom", 125, 10);
   }
 
+	&__scrollbar {
+		.scrollbar {
+			height: rem(100);
+		}
+		.simplebar-scrollbar::before {
+
+			background-color: #1E0C06;
+		}
+	}
+
   &__items {
-    overflow: auto;
     display: flex;
     gap: rem(60);
     justify-content: space-between;
-    padding-bottom: rem(10);
+    padding-bottom: rem(30);
   }
 
   &__item {
@@ -541,7 +549,7 @@
     position: absolute;
     max-width: 100%;
     border-radius: rem(42);
-    overflow: hidden;
+
 
 
     &_1 {
@@ -591,6 +599,7 @@
     }
 
     & img {
+			border-radius: rem(42);
       object-fit: none;
 
       @media (max-width:$mobile) {
@@ -905,10 +914,6 @@ th {
 				pointer-events: none;
 			} */
 		}
-	}
-
-	&__map {
-
 	}
 }
 
