@@ -227,6 +227,7 @@
 
   &__image {
     display: flex;
+		justify-content: center;
     position: relative;
     z-index: 5;
     margin-top: rem(15);
@@ -854,6 +855,7 @@ th {
 	}
 
 	&__body {
+		@include adaptiveValue("margin-left", 135, 0, 0, 1250, 767.8);
 	}
 
 	&__title {
