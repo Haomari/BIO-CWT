@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"404"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="e404">
+				<div class="e404_container">
+					<div class="e404__container">
+						<div class="e404__image">
+							<img src="@img/404.svg" alt="">
+						</div>
+						<div class="e404__title title">Woops</div>
+						<div class="e404__text text">Oh, you must be lost,
+							there is no such page.</div>
+						<a href="home" class="e404__button button">Go to the home page</a>
+					</div>
+					<div class="main__decor e404__decor">
+						<img src="@img/home_main/decor.jpg" alt="Decor">
+					</div>
+				</div>
+			</main>
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

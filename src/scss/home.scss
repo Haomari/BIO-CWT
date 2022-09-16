@@ -200,15 +200,16 @@
     @include adaptiveValue("margin-bottom", 125, 10);
   }
 
-	&__scrollbar {
-		.scrollbar {
-			height: rem(100);
-		}
-		.simplebar-scrollbar::before {
+  &__scrollbar {
+    .scrollbar {
+      height: rem(100);
+    }
 
-			background-color: #1E0C06;
-		}
-	}
+    .simplebar-scrollbar::before {
+
+      background-color: #1E0C06;
+    }
+  }
 
   &__items {
     display: flex;
@@ -227,7 +228,7 @@
 
   &__image {
     display: flex;
-		justify-content: center;
+    justify-content: center;
     position: relative;
     z-index: 5;
     margin-top: rem(15);
@@ -335,8 +336,8 @@
     align-items: center;
 
     div {
-			position: relative;
-			z-index: 5;
+      position: relative;
+      z-index: 5;
       @include adaptiveValue("margin-left", 70, 15, 0, 1265, 320);
       @include adaptiveValue("margin-right", 70, 15, 0, 1265, 320);
     }
@@ -602,7 +603,7 @@
     }
 
     & img {
-			border-radius: rem(42);
+      border-radius: rem(42);
       object-fit: none;
 
       @media (max-width:$mobile) {
@@ -846,79 +847,146 @@ th {
 
 .contact {
 
-	&__container {
-		display: flex;
-		justify-content: space-between;
-		@media (max-width:$mobile){
-			flex-direction: column;
-		}
-	}
+  &__container {
+    display: flex;
+    justify-content: space-between;
 
-	&__body {
-		@include adaptiveValue("margin-left", 135, 0, 0, 1250, 767.8);
-	}
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
+  }
 
-	&__title {
-		@include adaptiveValue("margin-bottom", 118, 41);
-	}
+  &__body {
+    @include adaptiveValue("margin-left", 135, 0, 0, 1250, 767.8);
+  }
 
-	&__link {
-	}
+  &__title {
+    @include adaptiveValue("margin-bottom", 118, 41);
+  }
 
-	&__call-us {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 34, 30);
-		}
-	}
+  &__link {}
 
-	&__item {
-		display: flex;
-		gap: rem(14);
-	}
+  &__call-us {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 34, 30);
+    }
+  }
 
-	&__icon {
-	}
+  &__item {
+    display: flex;
+    gap: rem(14);
+  }
 
-	&__phone {
-	}
+  &__icon {}
 
-	&__find-us {
-		@include adaptiveValue("margin-bottom", 80, 40, 3, 767.8, 320);
-	}
+  &__phone {}
 
-	&__place {
-	}
+  &__find-us {
+    @include adaptiveValue("margin-bottom", 80, 40, 3, 767.8, 320);
+  }
 
-	&__map-body {
-		@include adaptiveValue("width", 493, 380, 2, 1250, 767.8);
-		mask-image: (#798589, #798589);
-		transform: (0px, 0px, 0px);
-		position: relative;
-		@media (max-width:$mobile){
-			height: rem(230);
-			@include adaptiveValue("height", 700, 210);
-			width: 100%;
-		}
+  &__place {}
 
-		& iframe{
-			z-index:0;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;left: 0;
-			@include adaptiveValue("border-radius", 42, 14);
-			overflow: hidden;
-			mask-image: (#798589, #798589);
-			transform: (0px, 0px, 0px);
-	/* 		&::after{
+  &__map-body {
+    @include adaptiveValue("width", 493, 380, 2, 1250, 767.8);
+    mask-image: (#798589, #798589);
+    transform: (0px, 0px, 0px);
+    position: relative;
+
+    @media (max-width:$mobile) {
+      height: rem(230);
+      @include adaptiveValue("height", 700, 210);
+      width: 100%;
+    }
+
+    & iframe {
+      z-index: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      @include adaptiveValue("border-radius", 42, 14);
+      overflow: hidden;
+      mask-image: (#798589, #798589);
+      transform: (0px, 0px, 0px);
+      /* 		&::after{
 				content: '';
 				position: absolute;width: 100%;height: 100%;top: 0;left: 0;
 				@include adaptiveValue("border-radius", 42, 14);
 				overflow: hidden;
 				pointer-events: none;
 			} */
-		}
+    }
+  }
+}
+
+//====================================================================================================
+
+.e404 {
+
+  &_container {
+    position: relative;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &__image {
+    @include adaptiveValue("padding-top", 163, 50);
+
+
+    img {
+      max-width: 100%;
+			width: 60%;
+			// @include adaptiveValue("margin-left", 200, 50);
+			// @include adaptiveValue("margin-right", 200, 50);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 37, 15);
+    }
+  }
+
+  &__text {
+		line-height: math.div( 36, 30);
+		color: #FFDBBB;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 42, 16);
+    }
+  }
+
+  &__button {
+		@media (max-width:$mobileSmall) {
+      width: 100%;
+      padding: rem(11) rem(0);
+    }
 	}
+
+  &__decor {
+		height: 160%;
+    width: percent(1200, 1440);
+
+		&::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+			background: rgba(34, 32, 33, 0.65);
+      border-radius: rem(11) rem(55) rem(55) rem(11);
+    }
+
+    img {
+			max-height: 100%;
+			border-radius: rem(11) rem(55) rem(55) rem(11);
+    }
+  }
 }
 
 
