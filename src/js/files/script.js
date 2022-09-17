@@ -3,8 +3,12 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-let n = location.href;
+let href = location.href;
+let hrefChek = (href.includes("home.html"))||(href.includes("gallery.html"))||(href.includes("prices.html"))||(href.includes("about-us.html"))||(href.includes("contact.html"));
 
-if(n.includes(".html")) {
+if(href.includes(".htmo")) {
 	location = "404"
-}
+}else if (!hrefChek) {
+	location = "404"
+} 
+

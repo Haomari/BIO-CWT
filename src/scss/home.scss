@@ -14,7 +14,9 @@
   &__body {
     min-height: rem(714);
     background: #1E0C06;
-    border-radius: 43px 0px 0px 43px;
+		@include adaptiveValue("border-radius", 43, 14);
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
     filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
     @include adaptiveValue("margin-left", 93, 0, 2, 1440, 1320);
     @include adaptiveValue("margin-right", -105, 0, 2, 1440, 1280);
@@ -879,10 +881,19 @@ th {
 
   &__icon {}
 
-  &__phone {}
+  &__phone {
+		transition: color 0.3s ease 0s;
+		&:hover{
+			color: rgb(206, 180, 180);
+		}
+	}
 
   &__find-us {
     @include adaptiveValue("margin-bottom", 80, 40, 3, 767.8, 320);
+		transition: color 0.3s ease 0s;
+		&:hover{
+			color: rgb(206, 180, 180);
+		}
   }
 
   &__place {}

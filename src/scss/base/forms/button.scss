@@ -10,6 +10,7 @@
 	border-radius: rem(42);
 	display: inline-flex;
 	padding: rem(11) rem(70);
+	transition: color 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
 			background: #D5DCEE;
