@@ -52,7 +52,7 @@
 			background: rgba(213, 220, 238, 0.9);
 			border: 4px solid #6C200B;
 
-			@include adaptiveValue("max-width", 600, 440,1,1250,767);
+			@include adaptiveValue("max-width", 600, 420,1,1250,767);
 		}
 
 	}
