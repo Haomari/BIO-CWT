@@ -1,5 +1,5 @@
 %ic {
-	font-family: "icomoon";
+	font-family: "icons";
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -16,3 +16,18 @@
 }
 
 
+._icon-check-mark:before {
+  content: "\e900";
+}
+._icon-cross:before {
+  content: "\e901";
+}
+._icon-call-us:before {
+  content: "\e902";
+}
+._icon-find-us:before {
+  content: "\e903";
+}
+.icon-bgMain:before {
+  content: "\e900";
+}
