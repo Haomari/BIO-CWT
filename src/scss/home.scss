@@ -660,6 +660,7 @@
   }
 
   &__decor {
+		pointer-events: none;
     position: absolute;
     bottom: rem(-330);
     right: rem(-80);
