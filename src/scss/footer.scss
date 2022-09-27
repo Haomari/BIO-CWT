@@ -33,17 +33,37 @@
     display: flex;
     align-items: center;
     gap: rem(14);
-		transition: color 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
 
-		&:hover{
-			color: #728BAD;;
+    &:hover {
+      color: #728BAD;
+
+      &::before {
+        animation: phone 0.8s linear infinite;
+      }
+    }
+		@keyframes phone {
+			0% {
+				-webkit-transform: rotate(0deg);
+								transform: rotate(0deg);
+			}
+		
+			50% {
+				-webkit-transform: rotate(10deg);
+								transform: rotate(10deg);
+			}
+		
+			100% {
+				-webkit-transform: rotate(0deg);
+								transform: rotate(0deg);
+			}
 		}
 
-		&::before{
-			pointer-events: none;
-			cursor: none;
-			@include adaptiveValue("font-size", 50, 24);
-		}
+    &::before {
+      pointer-events: none;
+      cursor: none;
+      @include adaptiveValue("font-size", 50, 24);
+    }
   }
 
   &__call-us {
@@ -52,24 +72,43 @@
   }
 
   &__icon {
-		@include adaptiveValue("width", 35, 22, 3, 767, 320);
+    @include adaptiveValue("width", 35, 22, 3, 767, 320);
 
-		img {
+    img {
       max-width: 100%;
     }
-	}
+  }
 
   &__find-us {
     line-height: 139.4%;
+
+		&:hover{
+			&::before {
+        animation: find-us 0.8s linear infinite;
+      }
+		}
   }
+	@keyframes find-us {
+		0% {
+							transform: translate(0);
+		}
+	
+		50% {
+							transform: translate(0,rem(-3));
+	}
+		100% {
+							transform: translate(0);
+		}
+	}
 
   &__bottom {
     @media (max-width:$mobile) {
       text-align: center;
     }
-		&:hover{
-			text-decoration: underline;
-		}
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

@@ -171,7 +171,8 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-	position: absolute;
+	transition: opacity 0.4s ease 0s;
+	position: all;
 	top: 50%;
 	margin-top: calc(2px - (var(--swiper-navigation-size) / 2));
 	z-index: 20;
@@ -262,6 +263,8 @@
 	transform: scale(0.33);
 }
 .swiper-pagination-bullet {
+	transition: 0.3s ease 0s;
+	transition-property: background-color, border,opacity;
 	display: inline-block;
 	border-radius: 50%;
 	// background: var(--swiper-pagination-bullet-inactive-color, #000);
@@ -284,7 +287,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
 	opacity: var(--swiper-pagination-bullet-opacity, 1);
-	background: #D5DCEE;
+	background-color: #D5DCEE;
 }
 .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical > .swiper-pagination-bullets {
