@@ -328,11 +328,18 @@
     @include adaptiveValue("margin-bottom", 26, 10);
     margin-bottom: rem(26);
   }
+
+	&__body{
+		display: flex;
+		align-items: center;
+	}
 }
 
 .swiper-work {
 
-  &__wrapper {}
+  &__wrapper {
+
+	}
 
   &__slide {
     display: flex;
@@ -342,8 +349,6 @@
     div {
       position: relative;
       z-index: 5;
-      @include adaptiveValue("margin-left", 70, 15, 0, 1265, 320);
-      @include adaptiveValue("margin-right", 70, 15, 0, 1265, 320);
     }
 
     img {
@@ -353,17 +358,7 @@
   }
 
   &__button {
-    position: absolute;
-    top: 50%;
-    @include adaptiveValue("width", 54, 12);
-    @include adaptiveValue("hight", 54, 12);
-    margin-top: calc(0px - var(--swiper-navigation-size) / 2);
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
 
     &_1 {
       left: rem(0);
@@ -375,9 +370,9 @@
       left: auto;
     }
 
-    & img {
-      @include adaptiveValue("width", 54, 12);
-      @include adaptiveValue("hight", 54, 12);
+    &::before {
+			height: 100%;
+			@include adaptiveValue("font-size",54, 12);
     }
   }
 
@@ -400,6 +395,8 @@
 }
 
 .swiper-button-prev {
+	@include adaptiveValue("margin-right", 10, 5);
+	margin-right: rem(10);
   left: rem(30);
   right: auto;
 
@@ -409,6 +406,13 @@
 }
 
 .swiper-button-next {
+	@include adaptiveValue("margin-left", 10, 5);
+	margin-left: rem(10);
+
+	&::before{
+		transform: rotate(180deg);
+		
+	}
   &::after {
     display: none;
   }

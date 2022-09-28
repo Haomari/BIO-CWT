@@ -69,3 +69,10 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+
+.noSelection, label, img, button, .icon, .icon2 {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
