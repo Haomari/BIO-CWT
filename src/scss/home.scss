@@ -336,6 +336,7 @@
 }
 
 .swiper-work {
+	@include adaptiveValue("border-radius", 42, 14);
 
   &__wrapper {
 
@@ -345,11 +346,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    div {
-      position: relative;
-      z-index: 5;
-    }
 
     img {
       @include adaptiveValue("border-radius", 42, 14);
