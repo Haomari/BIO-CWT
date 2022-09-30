@@ -1,111 +1,132 @@
 // Заголовки, общие БЄМ блоки и проче...
 .home {
+  position: relative;
 
-	&__main {
-		@include adaptiveValue("padding-bottom", 205, 40);
-	}
+  &__decoration {
 
-	&__type {
-		@include adaptiveValue("padding-top", 205, 40);
-		@include adaptiveValue("padding-bottom", 125, 40);
-	}
+		max-width: 100%;
+		height: 100%;
+		margin: 0 auto;
 
-	&__work {
-		@include adaptiveValue("padding-top", 125, 40);
-		@include adaptiveValue("padding-bottom", 139, 40);
-	}
+    img {
+			pointer-events: none;
+      cursor: none;
+			z-index: 99;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: fill;
+    }
+  }
 
-	&__advantages {
-		@include adaptiveValue("padding-top", 139, 40);
-		@include adaptiveValue("padding-bottom", 146, 40);
-	}
+  &__main {
+    @include adaptiveValue("padding-bottom", 205, 40);
+  }
 
-	&__about {
-		@include adaptiveValue("padding-top", 146, 40);
-		@include adaptiveValue("padding-bottom", 96, 30);
-	}
+  &__type {
+    @include adaptiveValue("padding-top", 205, 40);
+    @include adaptiveValue("padding-bottom", 125, 40);
+  }
 
-	&__questions {
-		@include adaptiveValue("padding-top", 96, 30);
-		@include adaptiveValue("padding-bottom", 109, 93);
-	}
+  &__work {
+    @include adaptiveValue("padding-top", 125, 40);
+    @include adaptiveValue("padding-bottom", 139, 40);
+  }
+
+  &__advantages {
+    @include adaptiveValue("padding-top", 139, 40);
+    @include adaptiveValue("padding-bottom", 146, 40);
+  }
+
+  &__about {
+    @include adaptiveValue("padding-top", 146, 40);
+    @include adaptiveValue("padding-bottom", 96, 30);
+  }
+
+  &__questions {
+    @include adaptiveValue("padding-top", 96, 30);
+    @include adaptiveValue("padding-bottom", 109, 93);
+  }
 }
 
 .gallery {
 
-	&__work {
-		@include adaptiveValue("padding-top", 283, 105);
-		@include adaptiveValue("padding-bottom", 118, 20);
-	}
+  &__work {
+    @include adaptiveValue("padding-top", 283, 105);
+    @include adaptiveValue("padding-bottom", 118, 20);
+  }
 
-	&__type {
-		@include adaptiveValue("padding-top", 118, 20);
-		@include adaptiveValue("padding-bottom", 78, 35);
-	}
+  &__type {
+    @include adaptiveValue("padding-top", 118, 20);
+    @include adaptiveValue("padding-bottom", 78, 35);
+  }
 
-	&__questions {
-		@include adaptiveValue("padding-top", 78,35);
-		@include adaptiveValue("padding-bottom", 169, 95);
-	}
+  &__questions {
+    @include adaptiveValue("padding-top", 78, 35);
+    @include adaptiveValue("padding-bottom", 169, 95);
+  }
 }
 
 .prices {
 
-	&__price-list {
-		@include adaptiveValue("padding-top", 297, 111);
-		@include adaptiveValue("padding-bottom", 81, 28);
-	}
+  &__price-list {
+    @include adaptiveValue("padding-top", 297, 111);
+    @include adaptiveValue("padding-bottom", 81, 28);
+  }
 
-	&__questions {
-		@include adaptiveValue("padding-top", 81,28);
-		@include adaptiveValue("padding-bottom", 169, 95);
-	}
+  &__questions {
+    @include adaptiveValue("padding-top", 81, 28);
+    @include adaptiveValue("padding-bottom", 169, 95);
+  }
 }
 
 .about-us {
 
-	&__about {
-		@include adaptiveValue("padding-top", 288, 111);
-		@include adaptiveValue("padding-bottom", 103, 31);
-	}
+  &__about {
+    @include adaptiveValue("padding-top", 288, 111);
+    @include adaptiveValue("padding-bottom", 103, 31);
+  }
 
-	&__work {
-		@include adaptiveValue("padding-top", 103, 31);
-		@include adaptiveValue("padding-bottom", 141, 63);
-	}
+  &__work {
+    @include adaptiveValue("padding-top", 103, 31);
+    @include adaptiveValue("padding-bottom", 141, 63);
+  }
 
-	&__questions {
-		@include adaptiveValue("padding-top", 141,63);
-		@include adaptiveValue("padding-bottom", 169, 95);
-	}
+  &__questions {
+    @include adaptiveValue("padding-top", 141, 63);
+    @include adaptiveValue("padding-bottom", 169, 95);
+  }
 }
 
 .contact-us {
-	&__contact {
-		@include adaptiveValue("padding-top", 290, 102);
-		@include adaptiveValue("padding-bottom", 80, 21);
-	}
+  &__contact {
+    @include adaptiveValue("padding-top", 290, 102);
+    @include adaptiveValue("padding-bottom", 80, 21);
+  }
 
-	&__questions {
-		@include adaptiveValue("padding-top", 80, 21);
-		@include adaptiveValue("padding-bottom", 169, 95);
-	}
+  &__questions {
+    @include adaptiveValue("padding-top", 80, 21);
+    @include adaptiveValue("padding-bottom", 169, 95);
+  }
 }
 
 
 .title {
-	font-family: Dmitry Rastvortsev ;
-	@include adaptiveValue("font-size", 90, 30);
-	line-height: 115.4%;
-	text-transform: uppercase;
-	// font-weight: 500;
-	color: #F5F5F5;
+  font-family: Dmitry Rastvortsev;
+  @include adaptiveValue("font-size", 90, 30);
+  line-height: 115.4%;
+  text-transform: uppercase;
+  // font-weight: 500;
+  color: #F5F5F5;
 }
 
 .text {
-	@include adaptiveValue("font-size", 30, 15);
-	font-weight: 500;
-	& span {
-		font-weight: 700;
-	}
+  @include adaptiveValue("font-size", 30, 15);
+  font-weight: 500;
+
+  & span {
+    font-weight: 700;
+  }
 }
