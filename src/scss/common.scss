@@ -3,21 +3,35 @@
   position: relative;
 
   &__decoration {
-
-		max-width: 100%;
+		position: absolute;
+		width: 100%;
 		height: 100%;
+		top: 0;
+		left: 0;
 		margin: 0 auto;
+		pointer-events: none;
+		cursor: none;
+		z-index: 99;
+/* 		&::before{
+			content:'';
+			background: url("@img/decoration/main-dec.svg") 0 0/100% 100% no-repeat;
+			position: absolute;
+			min-width: 100%;
+			// max-width: rem(1440);
+			height: 100%;
+			margin: 0 auto;
+			pointer-events: none;
+			cursor: none;
+			z-index: 99;
+		} */
 
     img {
 			pointer-events: none;
       cursor: none;
 			z-index: 99;
-			position: absolute;
 			width: 100%;
 			height: 100%;
-			top: 0;
-			left: 0;
-			object-fit: fill;
+			object-fit: cover;
     }
   }
 
