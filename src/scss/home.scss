@@ -696,6 +696,11 @@
   &__price-list {}
 
   &__table {}
+
+	&__body{
+		display: flex;
+		align-items: center;
+	}
 }
 
 .price-list {

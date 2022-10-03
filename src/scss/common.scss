@@ -1,39 +1,42 @@
 // Заголовки, общие БЄМ блоки и проче...
-.home {
-  position: relative;
+/* "@img/decoration/main-dec-small.svg" */
+@mixin DI( $img-name, $img-name-small) {
+	position: relative;
 
-  &__decoration {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
+	&__decoration {
+		display: flex;
+		align-content: center;
+		justify-content: center;
 		margin: 0 auto;
 		pointer-events: none;
 		cursor: none;
 		z-index: 99;
-/* 		&::before{
+
+		&::before{
 			content:'';
-			background: url("@img/decoration/main-dec.svg") 0 0/100% 100% no-repeat;
+			background: url($img-name) 100% 100%/ cover no-repeat;
 			position: absolute;
-			min-width: 100%;
-			// max-width: rem(1440);
+			width: 100%;
+			max-width: rem(1460);
 			height: 100%;
 			margin: 0 auto;
 			pointer-events: none;
 			cursor: none;
 			z-index: 99;
-		} */
-
-    img {
-			pointer-events: none;
-      cursor: none;
-			z-index: 99;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-    }
+			@media (max-width:$mobile){
+				background: url($img-name-small) 0 0/ cover no-repeat;
+				z-index: -1;
+			}
+		}
   }
+}
+.home {
+  position: relative;
+
+@include DI (
+	$img-name-small:"@img/decoration/main-dec-small.svg",
+	$img-name:"@img/decoration/main-dec.svg",
+);
 
   &__main {
     @include adaptiveValue("padding-bottom", 205, 40);
@@ -67,6 +70,11 @@
 
 .gallery {
 
+	@include DI (
+	$img-name-small:"@img/decoration/gallery-dec-small.svg",
+	$img-name:"@img/decoration/gallery-dec.svg",
+);
+
   &__work {
     @include adaptiveValue("padding-top", 283, 105);
     @include adaptiveValue("padding-bottom", 118, 20);
@@ -85,6 +93,11 @@
 
 .prices {
 
+	@include DI (
+		$img-name-small:"@img/decoration/prices-dec-small.svg",
+		$img-name:"@img/decoration/prices-dec.svg",
+	);
+
   &__price-list {
     @include adaptiveValue("padding-top", 297, 111);
     @include adaptiveValue("padding-bottom", 81, 28);
@@ -97,6 +110,11 @@
 }
 
 .about-us {
+
+	@include DI (
+		$img-name-small:"@img/decoration/about-us-dec-small.svg",
+		$img-name:"@img/decoration/about-us-dec.svg",
+	);
 
   &__about {
     @include adaptiveValue("padding-top", 288, 111);
@@ -115,6 +133,12 @@
 }
 
 .contact-us {
+
+	@include DI (
+		$img-name-small:"@img/decoration/contact-dec-small.svg",
+		$img-name:"@img/decoration/contact-dec.svg",
+	);
+
   &__contact {
     @include adaptiveValue("padding-top", 290, 102);
     @include adaptiveValue("padding-bottom", 80, 21);
