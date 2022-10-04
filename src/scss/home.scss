@@ -343,9 +343,7 @@
 	}
 
   &__slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 
     img {
       @include adaptiveValue("border-radius", 42, 14);

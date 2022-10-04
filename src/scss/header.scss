@@ -133,7 +133,7 @@
 
   &__link {
     @include adaptiveValue("font-size", 20, 15, 2, 1440, 767.98);
-		transition: all 0.2s ease 0s;
+		transition: color 0.2s ease 0s;
 
 		&.current {
 			color: #A3B8D7;

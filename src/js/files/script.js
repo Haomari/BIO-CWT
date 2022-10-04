@@ -12,3 +12,7 @@ if(href.includes(".htmo")) {
 	location = "404"
 } 
 
+
+if (window.innerWidth >= 767) {
+	document.getElementsByClassName("main__image").removeAttribute("data-prlx-mouse");
+}
