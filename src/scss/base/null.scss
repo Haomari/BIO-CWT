@@ -59,6 +59,8 @@ ul li {
 }
 img {
 	vertical-align: top;
+	pointer-events: none;
+	cursor: none;
 }
 h1,
 h2,
@@ -70,9 +72,6 @@ h6 {
 	font-size: inherit;
 }
 
-.noSelection, label, img, button, .icon, .icon2 {
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
+label, img, button{
 	user-select: none;
 }

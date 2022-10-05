@@ -13,6 +13,6 @@ if(href.includes(".htmo")) {
 } 
 
 
-if (window.innerWidth >= 767) {
+/* if (window.innerWidth >= 767) {
 	document.getElementsByClassName("main__image").removeAttribute("data-prlx-mouse");
-}
+} */

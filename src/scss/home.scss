@@ -93,6 +93,9 @@
     margin: rem(43) rem(30) rem(57) rem(45);
     @include adaptiveValue("margin-right", 115, 30, 2, 1280, 991);
     position: relative;
+		user-select: none;
+		pointer-events: none;
+		cursor: none;
     flex: 1 1 41%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -231,6 +234,7 @@
 .item-type {
 
   &__image {
+		user-select: none;
     display: flex;
     justify-content: center;
     position: relative;
@@ -251,7 +255,7 @@
       transition: all 0.3s ease 0s;
       margin: 0 auto;
       max-width: 100%;
-      border-radius: rem(42);
+      border-radius: rem(50);
 
     }
   }
@@ -296,16 +300,6 @@
       }
     }
   }
-
-  &__arow {
-    position: absolute;
-    background: url('@img/type/right-arrow.svg') 0 0 no-repeat;
-    color: rgb(255, 255, 255);
-    width: rem(25);
-    height: rem(25);
-    bottom: 0;
-    right: 0;
-  }
 }
 
 //========================================================================================================================================================
@@ -343,11 +337,11 @@
 	}
 
   &__slide {
-
+		padding: 0 1.5%;
 
     img {
       @include adaptiveValue("border-radius", 42, 14);
-      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -389,7 +383,7 @@
 }
 
 .swiper-button-prev {
-	@include adaptiveValue("margin-right", 10, 5);
+	@include adaptiveValue("margin-right", 20, 5);
 	margin-right: rem(10);
   left: rem(30);
   right: auto;
@@ -400,7 +394,7 @@
 }
 
 .swiper-button-next {
-	@include adaptiveValue("margin-left", 10, 5);
+	@include adaptiveValue("margin-left", 20, 5);
 	margin-left: rem(10);
 
 	&::before{
@@ -440,6 +434,9 @@
   }
 
   &__image {
+		user-select: none;
+		pointer-events: none;
+		cursor: none;
     align-self: center;
     flex: 0 0 percent(609, 1250);
 
@@ -541,6 +538,9 @@
   }
 
   &__images {
+		user-select: none;
+		pointer-events: none;
+		cursor: none;
     position: relative;
     flex: 0 0 percent(524, 1335);
 
@@ -673,8 +673,7 @@
 .prices {
 
   &__tables {
-    @include adaptiveValue("margin-left", 70, 15, 0, 1265, 320);
-    @include adaptiveValue("margin-right", 70, 15, 0, 1265, 320);
+		padding: 0 1.5%;
     display: grid;
     grid-template-columns: 1fr 0.8fr;
     @include adaptiveValue("gap", 22, 8);
@@ -791,27 +790,6 @@
 		@include adaptiveValue("border-bottom-right-radius", 42, 14);
 	}
 } */
-}
-
-
-.tablepress:first-child,
-.tablepress tbody td:first-child,
-.tablepress tr:first-child,
-.tablepress tr:last-child,
-.tablepress thead th:first-child {
-  border-left: 0 !important;
-}
-
-.tablepress:last-child,
-.tablepress tbody td:last-child,
-.tablepress tr:last-child,
-.tablepress tr:first-child,
-.tablepress thead th:last-child {
-  border-right: 0 !important;
-}
-
-.tablepress-id-2 .row-4 td {
-  border-left: none !important;
 }
 
 table {
