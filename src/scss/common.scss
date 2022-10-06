@@ -44,7 +44,7 @@
 
   &__type {
     @include adaptiveValue("padding-top", 205, 40);
-    @include adaptiveValue("padding-bottom", 125, 40);
+    @include adaptiveValue("padding-bottom", 100, 30);
   }
 
   &__work {
