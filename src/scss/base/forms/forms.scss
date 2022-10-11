@@ -37,6 +37,7 @@
 			flex: 1 1 auto;
 			height: rem(257);
 			justify-content: flex-start;
+			resize: none;
 			padding: rem(18) rem(47);
 			@include adaptiveValue("border-radius", 42, 14,0,767,320);
 			@include adaptiveValue("height", 257, 134,0,767,320);
